@@ -1,12 +1,16 @@
-# vs-cordova-3-1-ignore-files
-Plugin removes unneeded files from VS Cordova Tools 3.1 packaging operation
+# vs-cordova-ignore-files
+Plugin removes unneeded files from VS Cordova Tools packaging operation
+
+### Forked by Firzenizer
+This forked version of the plugin allows working with VS and PhoneGap Build. The files listed are removed before compiling. This allows you to keep icons/splashscreens under the www directory which is required by PhoneGap Build. This fork was tested using VS2015 comminity edition with Apache Cordova update 10.
+
 ### What is it?
 In Visual Studio 2013 with *Visual Studio Tools for Apache Cordova CTP3.1* installed or Visual Studio 2015 CTP 6 the build or packaging operation for mobile hybrid apps includes **EVERYTHING** in your Visual Studio project in the resulting application package. This includes _references.js, packages.config and the template readme in addition to Typescript and unminified javascript files leading to code leakage and enormous useless bloat. Unlike other Visual Studio projects there is no built-in method for excluding files from the build at this time. Microsoft has assured us that as General Availability of VS 2015 approaches the situation will improve. For now this plugin will give you a great deal of control over which files land in your app package.
 ### Installation
 1. Open \config.xml.
 2. Click Custom tab.
 3. Check Git.
-4. Paste the URL of this repo https://github.com/MagicBoxSoftware/vs-cordova-3-1-ignore-files
+4. Paste the URL of this repo https://github.com/Firzenizer/vs-cordova-ignore-files
 5. Click the arrow button then click "Add" when it appears.
 
 ### Usage
@@ -31,7 +35,7 @@ The plugin has been extensively tested in Visual Studio 2013 with *Visual Studio
 The plugin will be maintained through any further Cordova tools releases until the functionality is no longer needed.
 
 ### Credits
-I would like to thank Chuck Lantz - https://github.com/Chuxel - of Microsoft who answered my Stack Overflow question http://stackoverflow.com/questions/29684190/visual-studio-cordova-exclude-files/29704705 by writing a Cordova plugin to remove Typescript files from the build -> https://github.com/Chuxel/taco-tricks/tree/master/plugin-remove-typescript .
+Original creator [MagicBoxSoftware](https://github.com/MagicBoxSoftware). I would like to thank Chuck Lantz - https://github.com/Chuxel - of Microsoft who answered my Stack Overflow question http://stackoverflow.com/questions/29684190/visual-studio-cordova-exclude-files/29704705 by writing a Cordova plugin to remove Typescript files from the build -> https://github.com/Chuxel/taco-tricks/tree/master/plugin-remove-typescript .
 
 It was from that example that this plugin was inspired.
 
